@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Intro to Web-Dev</title>
+    <title>CommuniCares</title>
     <link rel="stylesheet" href="/static/bootstrap.min.css">
     <link rel='stylesheet' href='static/styles.css' />
     <meta charset="UTF-8">
@@ -35,8 +35,10 @@
     <!-- content -->
     <div class='container'>
         <h2>Welcome to results!</h2>
+        <p>Once you take the health survey, your results will be displayed here.</p>
+        <a href="/survey">Take the survey here!</a> <br />
         {% for user in users %}
-        <p>{{user.first_name}} {{user.last_name}} is in {{user.house}}</p>
+        <p>{{user.first_name}} {{user.last_name}}'s past result: {{user.summary}}</p>
         {% endfor %}
     </div>
 </body>

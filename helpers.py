@@ -1,14 +1,16 @@
+"""Helper functions and a class for keeping track of users and calculating their individualized results."""
+
 class user:
     id: int
     first_name: str
     last_name: str
-    house: str
+    summary: str
 
-    def __init__(self, id: int, fname: str, lname: str, house: str):
+    def __init__(self, id: int, fname: str, lname: str, summary: str):
         self.id = id
         self.first_name = fname
         self.last_name = lname
-        self.house = house
+        self.summary = summary
 
 
 def find_water_intake(age: int) -> str:
@@ -26,6 +28,7 @@ def find_water_intake(age: int) -> str:
 
 
 def find_sleep(age: int) -> str:
+    """Based on the users age, returns the recommended amount of sleep in hours."""
     if age < 1:
         return "13-16"
     elif age == 1 or age == 2:
@@ -43,21 +46,11 @@ def find_sleep(age: int) -> str:
 
 
 def doctor_or_not(symptoms: bool) -> bool:
+    """Based on the reported symptoms, returns whether the user should see a doctor."""
     if symptoms:
         return True
     else: 
         return False
-    
-
-def find_house(animal: str) -> str:
-    if animal == 'eagle':
-        return 'Ravenclaw'
-    elif animal == 'lion':
-        return 'Gryffindor'
-    elif animal == 'badger':
-        return 'Hufflepuff'
-    else:
-        return 'Slytherin'
 
 
 def covid_result(covid: str) -> str:

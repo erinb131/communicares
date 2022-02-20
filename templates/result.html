@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Intro to Web-Dev</title>
+    <title>CommuniCares</title>
     <link rel="stylesheet" href="/static/bootstrap.min.css">
     <link rel='stylesheet' href='static/styles.css' />
     <meta charset="UTF-8">
@@ -25,6 +25,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/all-results">results</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/resources">resources</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -32,7 +35,8 @@
     <!-- content -->
     <div class='container'>
         <h2>Here are your personalized recommendations based on your survey responses &#9825;</h2>
-        <p>Insert summary here {{summary}}</p>
+        <br></br>
+        <p>{{summary}}</p>
         <form method="get">
             <input type="submit" value="Take the survey again!">
         </form>
